@@ -1,2 +1,4 @@
 */node_modules
-*/.eslintcache
+01-starting-setup/.eslintcache
+package-lock.json
+01-starting-setup/.eslintcache
