@@ -1,4 +1,4 @@
-import Chart from "./Chart";
+import Chart from "./../Chart/Chart";
 
 const ExpensesChart = (props) => {
   const chartDataPoints = [
