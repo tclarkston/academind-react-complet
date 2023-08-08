@@ -21,11 +21,6 @@ const AddUser = props => {
     setUserName('');
     setAge('');
   };
-
-  const clickHandler = event => {
-    console.log(enteredUserName, enteredAge)
-
-  };
   
   const userNameChangeHandler = event => {
     setUserName(event.target.value);
@@ -42,7 +37,7 @@ const AddUser = props => {
         <input id='username' type='text' value={enteredUserName} onChange={userNameChangeHandler} />
         <label htmlFor='age'>Age (Years)</label>
         <input id='age' type='number' value={enteredAge} onChange={ageChangeHandler}/>
-        <Button type='submit' onClick={clickHandler}>Add User</Button>
+        <Button type='submit'>Add User</Button>
       </form>
     </Card>
   )
