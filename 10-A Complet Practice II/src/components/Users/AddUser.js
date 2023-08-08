@@ -7,7 +7,7 @@ const AddUser = props => {
   const [enteredUserName, setUserName] = useState('');
   const [enteredAge, setAge] = useState('');
   
-  const submitHandler = event => {
+  const addUserHandler = event => {
     event.preventDefault();
 
     if (enteredUserName.trim().length ===0 || enteredAge.trim().length ===0){
@@ -18,6 +18,7 @@ const AddUser = props => {
       return;
     }
 
+    props.onAddUser(enteredUserName, enteredAge);
     setUserName('');
     setAge('');
   };
@@ -32,7 +33,7 @@ const AddUser = props => {
 
   return (
     <Card className={classes.input}>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={addUserHandler}>
         <label htmlFor='username'>Username</label>
         <input id='username' type='text' value={enteredUserName} onChange={userNameChangeHandler} />
         <label htmlFor='age'>Age (Years)</label>
