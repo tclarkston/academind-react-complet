@@ -22,7 +22,7 @@ const Login = (props) => {
     }, 500)
     
     return () => {
-      console.log('Cleanup');
+      console.log('CLEANUP');
       clearTimeout(handler);
     }
   }, [enteredEmail, enteredPassword]);
